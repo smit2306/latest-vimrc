@@ -1,0 +1,168 @@
+// this settings file is from my ubuntu machine
+{
+  // ==================================================================================================================================
+  // vscode settings
+  "window.zoomLevel": 1,
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
+  "terminal.integrated.fontSize": 22,
+  "terminal.integrated.fontFamily": "mononoki",
+  "python.languageServer": "Pylance",
+  "python.defaultInterpreterPath": "/home/linuxbrew/.linuxbrew/bin/python",
+  // ==================================================================================================================================
+  // code formatters and lintter settings
+  "python.formatting.provider": "black",
+  "python.analysis.typeCheckingMode": "basic",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // ==================================================================================================================================
+  // text editor settings
+  "editor.fontFamily": "'Ubuntu Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.tabCompletion": "on",
+  "editor.fontSize": 22,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.highlightActiveIndentGuide": false,
+  "editor.renderIndentGuides": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["typescript", "typescriptreact"],
+  // ==================================================================================================================================
+  // biscuits settings
+  "js-ts-biscuits.annotationPrefix": "📎 ",
+  "json-biscuits.annotationPrefix": "📎 ",
+  "css-biscuits.annotationPrefix": "📎 ",
+  "assorted-biscuits.annotationPrefix": "📎 ",
+  // ==================================================================================================================================
+  // vim settings
+  "vim.leader": " ",
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 100,
+  "vim.searchHighlightColor": "rgba(150, 150, 150, 0.3)",
+  "vim.handleKeys": {
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false,
+    "<C-d>": false
+  },
+  "vim.useCtrlKeys": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // nerd tree
+    {
+      "before": ["<leader>", "c", "<leader>"],
+      "commands": ["editor.action.commentLine"]
+    },
+
+    // cut without register
+    {
+      "before": ["<leader>", "X"],
+      "after": ["\"", "_", "d"]
+    },
+
+    // delete current selection and paste
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "_", "d", "P"]
+    },
+
+    // indentation keymaps
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+
+    // toggle comments
+    {
+      "before": ["<leader>", "c", "<leader>"],
+      "after": ["g", "c"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // nerd tree
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+
+    // reveal in explorer
+    {
+      "before": ["<leader>", "p", "v"],
+      "commands": ["revealInExplorer"]
+    },
+
+    // rename file
+    {
+      "before": ["<leader>", "r", "f"],
+      "commands": ["fileutils.renameFile"]
+    },
+
+    // window movements
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    // buffer movements
+    {
+      "before": ["<leader>", "["],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "]"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+
+    // project wide file search
+    {
+      "before": ["<leader>", "p", "s"],
+      "commands": ["filesExplorer.findInFolder"]
+    },
+
+    // Bind ZZ to the vim command :wq (save and close the current file):
+    {
+      "before": ["Z", "Z"],
+      "commands": [":wq"]
+    },
+
+    // toggle comments
+    {
+      "before": ["<leader>", "c", "<leader>"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ]
+  // ==================================================================================================================================
+}
